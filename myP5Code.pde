@@ -29,8 +29,11 @@ text("🐡", Fishex+100,Fishey-50);
 if(Fishex<200){
 Fishex-=9
  
+drawbubbles(10, 200)
+drawbubbles(9,199)
 };
-drawshark(mouseX,mouseY)
+drawshark(mouseX,mouseY);
+drawSeaweed(200,200);
 };
 
 //🟢mouseClicked Function - will run when mouse is clicked
@@ -45,19 +48,31 @@ var drawFish = function(fishX, fishY, fishColor){
   fill(fishColor);
   text("𓆝", fishX, fishY);
 };
-
+//Scary Shark
 var drawshark = function(SharkX, SharkY){
   var SharkSize = 60
   fill(255,255,255)
   textSize(SharkSize);
   text("scary shark", SharkX, SharkY);
 };
-
+//Bubble function
 var drawbubbles = function(BubX, BubY){
-  var BubSize = 60
+  var BubSize = random(10,60)
+  var BubX= random(10,600)
+  var BubY= random(10,600)
   fill(255,255,255)
-  textSize(SharkSize);
-  text("scary shark", SharkX, SharkY);
+  textSize(BubSize);
+  text("o", BubX, BubY);
+};
+//seaweed function
+var drawSeaweed = function(WeedX, WeedY){
+ var WeedSize=90
+ var WeedX= 300
+ var WeedY= 400
+ fill(25, 61, 10)
+ textSize(WeedSize);
+ text("⌇",WeedX, WeedY);
 };
 var Fishey=200
 var Fishex=200
+
